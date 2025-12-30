@@ -1,0 +1,60 @@
+# Stock Price Alerts Configuration
+
+# Watchlist - Add stock symbols you want to monitor
+watchlist:
+  - AAPL
+  - GOOGL
+  - MSFT
+  - TSLA
+  - AMZN
+
+# Alert Schedule - Times to send scheduled alerts (24-hour format)
+alert_schedule:
+  - time: "09:30"
+    message: "Market is open! Here is the status of your watchlist:"
+  - time: "12:00"
+    message: "Good afternoon! Here is the status of your watchlist:"
+  - time: "16:00"
+    message: "Market is closing! Here is the status of your watchlist:"
+
+# Price Change Alerts - Get notified when stock price changes by a certain percentage
+price_alerts:
+  enabled: true
+  # Percentage change threshold (e.g., 5 means 5% change)
+  threshold_percentage: 5.0
+  # Check interval in minutes
+  check_interval: 15
+
+# Notification Settings
+notifications:
+  # Enable/disable notification types
+  sms_enabled: true
+  email_enabled: false
+
+  # Include additional information in alerts
+  include_price_change: true
+  include_volume: true
+  include_day_high_low: true
+
+# Market Hours (Eastern Time)
+market_hours:
+  open: "09:30"
+  close: "16:00"
+  # Only send alerts during market hours
+  only_during_market_hours: false
+
+# Data Storage
+storage:
+  # Store historical price data
+  enabled: true
+  # SQLite database file
+  database: "stock_data.db"
+  # Keep history for N days
+  retention_days: 90
+
+# API Rate Limiting
+rate_limiting:
+  # Delay between API calls (seconds) to avoid rate limits
+  api_delay: 12
+  # Maximum retries for failed API calls
+  max_retries: 3
