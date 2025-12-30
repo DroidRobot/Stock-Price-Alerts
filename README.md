@@ -2,20 +2,20 @@
 
 A comprehensive, modern stock monitoring and alerting system that sends you notifications via SMS and email based on scheduled times and significant price changes.
 
-## Features ✨
+## Features 
 
-- **📱 Multi-Channel Notifications**: Send alerts via SMS (Twilio) and Email
-- **⏰ Scheduled Alerts**: Get updates at market open, noon, and close (fully customizable)
-- **📊 Price Change Alerts**: Automatic notifications when stocks move by a threshold percentage
-- **💾 Historical Data**: Store and track price history in a SQLite database
-- **🎨 Beautiful CLI**: Rich command-line interface for managing your watchlist
-- **⚙️ Highly Configurable**: YAML-based configuration for all settings
-- **🔒 Secure**: Environment variables for sensitive credentials
-- **📈 Real-time Monitoring**: Continuous monitoring with intelligent rate limiting
-- **🌐 Timezone Support**: Configurable timezone for market hours
-- **🔄 Robust Error Handling**: Automatic retries and comprehensive logging
+- **Multi-Channel Notifications**: Send alerts via SMS (Twilio) and Email
+- **Scheduled Alerts**: Get updates at market open, noon, and close (fully customizable)
+- **Price Change Alerts**: Automatic notifications when stocks move by a threshold percentage
+- **Historical Data**: Store and track price history in a SQLite database
+- **Beautiful CLI**: Rich command-line interface for managing your watchlist
+- **Highly Configurable**: YAML-based configuration for all settings
+- **Secure**: Environment variables for sensitive credentials
+- **Real-time Monitoring**: Continuous monitoring with intelligent rate limiting
+- **Timezone Support**: Configurable timezone for market hours
+- **Robust Error Handling**: Automatic retries and comprehensive logging
 
-## Quick Start 🚀
+## Quick Start
 
 ### Prerequisites
 
@@ -72,7 +72,7 @@ A comprehensive, modern stock monitoring and alerting system that sends you noti
    python main.py
    ```
 
-## Configuration ⚙️
+## Configuration
 
 ### config.yaml
 
@@ -150,7 +150,7 @@ LOG_LEVEL=INFO
 TIMEZONE=America/New_York
 ```
 
-## CLI Commands 🖥️
+## CLI Commands
 
 The application includes a powerful CLI for managing your watchlist:
 
@@ -189,7 +189,7 @@ python -m stock_alerts.cli history AAPL --days 7
 python -m stock_alerts.cli test
 ```
 
-## Usage Examples 📝
+## Usage Examples
 
 ### Basic Usage
 
@@ -227,7 +227,7 @@ notifications:
   email_enabled: true
 ```
 
-## Project Structure 📁
+## Project Structure
 
 ```
 Stock-Price-Alerts/
@@ -253,7 +253,7 @@ Stock-Price-Alerts/
 └── logs/                        # Application logs
 ```
 
-## How It Works 🔧
+## How It Works
 
 1. **Configuration Loading**: Reads `config.yaml` and `.env` files
 2. **Initialization**: Sets up API clients, database, and notifiers
@@ -271,7 +271,7 @@ Stock-Price-Alerts/
    - Calculates price changes
    - Cleans up old data based on retention settings
 
-## API Rate Limits ⏱️
+## API Rate Limits
 
 **Alpha Vantage Free Tier:**
 - 5 API calls per minute
@@ -286,7 +286,7 @@ The application automatically handles rate limiting with configurable delays bet
 - API keys and passwords are loaded from environment variables
 - Database files are excluded from git
 
-## Troubleshooting 🔍
+## Troubleshooting
 
 ### Common Issues
 
@@ -317,21 +317,21 @@ Set log level in `.env`:
 LOG_LEVEL=DEBUG  # Options: DEBUG, INFO, WARNING, ERROR
 ```
 
-## Upgrading from v1 🔄
+## Upgrading from v1
 
 If you're using the original `main.py`, here's what's new:
 
 **v1 → v2 Changes:**
-- ✅ Modular architecture (organized code)
-- ✅ Environment variables (secure credentials)
-- ✅ Email notifications (in addition to SMS)
-- ✅ Price change alerts (dynamic monitoring)
-- ✅ Database storage (price history)
-- ✅ CLI interface (easy management)
-- ✅ Better error handling (robust)
-- ✅ Comprehensive logging (debugging)
-- ✅ YAML configuration (flexible)
-- ✅ Fixed time checking (reliable alerts)
+- Modular architecture (organized code)
+- Environment variables (secure credentials)
+- Email notifications (in addition to SMS)
+- Price change alerts (dynamic monitoring)
+- Database storage (price history)
+- CLI interface (easy management)
+- Better error handling (robust)
+- Comprehensive logging (debugging)
+- YAML configuration (flexible)
+- Fixed time checking (reliable alerts)
 
 ## Contributing 🤝
 
@@ -363,3 +363,4 @@ If you encounter any issues or have questions:
 ---
 
 **Happy Trading! 📈💰**
+
